@@ -1,6 +1,6 @@
 # Project Report: Supply-Chain Order ETL Pipeline
 
-**Author:** [Your Name], B.Tech Electronics and Communication Engineering
+**Author:** G. Sohan, B.Tech Electronics and Communication Engineering
 **Type:** Individual data engineering portfolio project
 **Date:** November 2026
 **Stack:** Python 3.11 · pandas 2.2 · SQLAlchemy 2.0 · PostgreSQL 16 · pytest · GitHub Actions
