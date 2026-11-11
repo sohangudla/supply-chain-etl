@@ -1,0 +1,16 @@
+# secrets
+.env
+*.env
+!.env.example
+
+# data (download with scripts/download_data.py)
+data/source/
+data/landing/
+
+# runtime
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/

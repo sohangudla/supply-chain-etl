@@ -1,0 +1,35 @@
+# Runs the unit + integration tests on every push / PR against a throwaway
+# PostgreSQL service container. Uses synthetic test data, so no Kaggle download.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: etl_user
+          POSTGRES_PASSWORD: ci_only_password
+          POSTGRES_DB: olist_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U etl_user" --health-interval 5s
+          --health-timeout 5s --health-retries 10
+    env:
+      PGHOST: localhost
+      PGPORT: 5432
+      PGUSER: etl_user
+      PGPASSWORD: ci_only_password
+      PGTEST_DATABASE: olist_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt && pip install -e .
+      - run: pytest -v
