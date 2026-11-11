@@ -1,11 +1,11 @@
 # Analytics results
 
-Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
+Generated 2026-11-11 11:02 from the `olist_dw` warehouse.
 
 
 ## On time delivery by state
 
-`sql/analytics/01_on_time_delivery_by_state.sql` - 18 rows, 377 ms
+`sql/analytics/01_on_time_delivery_by_state.sql` - 18 rows, 361 ms
 
 | customer_state | delivered_orders | on_time_orders | on_time_pct |
 |---|---|---|---|
@@ -31,7 +31,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Monthly delivery delays
 
-`sql/analytics/02_monthly_delivery_delays.sql` - 21 rows, 202 ms
+`sql/analytics/02_monthly_delivery_delays.sql` - 21 rows, 205 ms
 
 | year_month | delivered_orders | late_orders | late_pct | late_pct_change_vs_prev_month | avg_days_late_when_late | avg_delivery_days |
 |---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Top 10 sellers by revenue
 
-`sql/analytics/03_top_10_sellers_by_revenue.sql` - 10 rows, 351 ms
+`sql/analytics/03_top_10_sellers_by_revenue.sql` - 10 rows, 320 ms
 
 | revenue_rank | seller_id | city | state | orders | revenue_brl | pct_of_total | cumulative_pct |
 |---|---|---|---|---|---|---|---|
@@ -78,7 +78,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Avg delivery time by category
 
-`sql/analytics/04_avg_delivery_time_by_category.sql` - 45 rows, 258 ms
+`sql/analytics/04_avg_delivery_time_by_category.sql` - 45 rows, 216 ms
 
 | category | delivered_items | avg_delivery_days | median_delivery_days | late_pct | avg_freight_brl |
 |---|---|---|---|---|---|
@@ -111,7 +111,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Sellers late rate above average
 
-`sql/analytics/05_sellers_late_rate_above_average.sql` - 30 rows, 461 ms
+`sql/analytics/05_sellers_late_rate_above_average.sql` - 30 rows, 347 ms
 
 | seller_id | seller_state | delivered_orders | late_pct | avg_delivery_days |
 |---|---|---|---|---|
@@ -144,7 +144,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Monthly revenue running total
 
-`sql/analytics/06_monthly_revenue_running_total.sql` - 24 rows, 333 ms
+`sql/analytics/06_monthly_revenue_running_total.sql` - 24 rows, 258 ms
 
 | year_month | orders | revenue_brl | running_total_brl | moving_avg_3m_brl | mom_growth_pct |
 |---|---|---|---|---|---|
@@ -176,7 +176,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Shipping lanes
 
-`sql/analytics/07_shipping_lanes.sql` - 10 rows, 464 ms
+`sql/analytics/07_shipping_lanes.sql` - 10 rows, 426 ms
 
 | lane_rank | lane | orders | avg_delivery_days | late_pct | avg_freight_brl |
 |---|---|---|---|---|---|
@@ -194,7 +194,7 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 
 ## Pipeline audit
 
-`sql/analytics/08_pipeline_audit.sql` - 7 rows, 11 ms
+`sql/analytics/08_pipeline_audit.sql` - 8 rows, 20 ms
 
 | run_id | status | started_at | seconds | watermark_before | watermark_after | fact_rows_inserted | fact_rows_updated | rows_rejected | checks_with_failures |
 |---|---|---|---|---|---|---|---|---|---|
@@ -205,3 +205,4 @@ Generated 2026-11-11 09:35 from the `olist_dw` warehouse.
 | 5 | SUCCESS | 2026-11-11 09:29:22 | 9 | 2018-10-17 17:30:18 | 2018-10-17 17:30:18 | 0 | 0 | 0 | 3 |
 | 6 | SUCCESS | 2026-11-11 09:30:15 | 57 |  | 2018-10-17 17:30:18 | 0 | 112650 | 0 | 5 |
 | 7 | SUCCESS | 2026-11-11 09:35:16 | 39 | 2018-10-17 17:30:18 | 2018-10-17 17:30:18 | 0 | 0 | 0 | 5 |
+| 8 | SUCCESS | 2026-11-11 11:02:07 | 10 | 2018-10-17 17:30:18 | 2018-10-17 17:30:18 | 0 | 0 | 0 | 5 |
