@@ -1,6 +1,6 @@
 # Supply-Chain Order ETL Pipeline
 
-> 📄 **Full project report:** [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md)
+> 📄 **Full project report:** [PDF](docs/PROJECT_REPORT.pdf) · [Markdown](docs/PROJECT_REPORT.md)
 
 A batch ETL pipeline that loads the public **Olist Brazilian e-commerce** dataset
 (99,441 orders, 112,650 order items, 9 CSV files) into a **PostgreSQL star schema**.
